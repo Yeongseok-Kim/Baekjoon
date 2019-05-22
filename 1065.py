@@ -1,18 +1,20 @@
 # 한수
 
 def f(n):
+    s=[]
+
     if n<100:
         return 1
-    s0=n%10
-    n=n//10
-    s1=n%10
-    n=n//10
-    s2=n%10
 
-    if (s0-s1)==(s1-s2):
-        return 1
-    else:
-        return 0
+    while n!=0:
+        s.append(n%10)
+        n=n//10
+    
+    for i in range(1,len(s)-1):
+        if s[i-1]-s[i]!=s[i]-s[i+1]:
+            return 0
+    
+    return 1
 
 n=int(input())
 result=0
