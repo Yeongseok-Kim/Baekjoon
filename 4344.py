@@ -17,7 +17,7 @@ while i>0:
     overAverage=0
     j=1
     while s[0]>=j:
-        if average<=s[j]:
+        if average<s[j]:
             overAverage+=1
         j+=1
     result.append(round((overAverage/s[0])*100,3))
