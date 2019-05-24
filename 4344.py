@@ -24,5 +24,4 @@ while i>0:
     i-=1
 
 for i in result:
-    print('%.3f'%i,end='')
-    print("%")
+    print('%.3f'%i,end='%\n')
